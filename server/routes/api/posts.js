@@ -30,8 +30,10 @@ router.delete('/:id', async (req, res) => {
 async function loadPostsCollection() {
 	const client = await mongodb.MongoClient.connect(
 		'mongodb+srv://christian:damars0nBars@seer29.tipk9.mongodb.net/<dbname>?retryWrites=true&w=majority', {
-		useNewUrlParser: true
-	});
+			useNewUrlParser: true,
+			useUnifiedTopology: true
+		}
+	);
 
 	return client.db('seer29').collection('posts');
 }
