@@ -16,7 +16,7 @@
 				v-bind:key="post._id"
 				v-on:dblclick="deletePost(post._id)"
 			>
-				{{ `${post.createdAt.getDate()}/${post.createdAt.getMonth()}/${post.createdAt.getFullYear()}` }}
+				<div class="created-at">{{ `${post.createdAt.getDate()}/${post.createdAt.getMonth()}/${post.createdAt.getFullYear()}` }}</div>
 				<p class="text">{{ post.text }}</p>
 			</div>
 		</div>
@@ -72,7 +72,7 @@ p.error {
 div.post {
 	position: relative;
 	border: 1px solid #5bd658;
-	background-color: 3bcffb8;
+	background-color: #5bd658;
 	padding: 10px 10px 30px 10px;
 	margin-bottom: 15px;
 }
