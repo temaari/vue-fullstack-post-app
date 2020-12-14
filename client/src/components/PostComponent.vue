@@ -1,10 +1,10 @@
 <template>
 	<div class="container">
-		<h1>Latest Posts</h1>
+		<h1>Shopping List</h1>
 		<div class="create-post">
-			<label for="create-post">Say Something...</label>
-			<input type="text" id="create-post" v-model="text" placeholder="Create a post">
-			<button v-on:click="createPost">Post!</button>
+			<label for="create-post">Add to your List...</label>
+			<input type="text" id="create-post" v-model="text" placeholder="Add an item" />
+			<button v-on:click="createPost">Add to List</button>
 		</div>
 		<hr>
 		<p class="error" v-if="error">{{ error }}</p>
